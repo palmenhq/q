@@ -38,7 +38,7 @@ class Spotify:
                                                    client_id=self._credentials['client_id'],
                                                    client_secret=self._credentials['client_secret'],
                                                    redirect_uri='http://localhost:1337/callback',
-                                                   cache_path=os.path.expanduser(f"~/.spotify-cache-{self._credentials['username']}"))
+                                                   cache_path=os.path.expanduser(f"~/.q/spotify-cache-{self._credentials['username']}"))
         with open(os.path.expanduser("~/.q/spotify_credentials"), 'w') as stream:
             self._credentials['auth'] = token
             yaml.safe_dump(self._credentials, stream)
