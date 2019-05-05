@@ -53,6 +53,11 @@ def main():
             client.next()
             exit(0)
 
+        if sys.argv[2] == 'prev':
+            client.prev()
+            exit(0)
+
+
         print('No such Spotify command ' + sys.argv[2])
         exit(1)
 

@@ -53,6 +53,9 @@ class Spotify:
     def next(self):
         requests.post(_BASE_URL + '/v1/me/player/next', headers={'Authorization': 'Bearer ' + self.token})
 
+    def prev(self):
+        requests.post(_BASE_URL + '/v1/me/player/previous', headers={'Authorization': 'Bearer ' + self.token})
+
     def play(self):
         requests.put(_BASE_URL + '/v1/me/player/play', headers={'Authorization': 'Bearer ' + self.token})
 
